@@ -1,1 +1,0 @@
-print("Smoke weed everyday")
