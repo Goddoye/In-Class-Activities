@@ -1,0 +1,2 @@
+ALTER TABlE programming_languages 
+ADD COLUMN mastered BOOLEAN default true;
