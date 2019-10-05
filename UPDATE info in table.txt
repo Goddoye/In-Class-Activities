@@ -1,0 +1,8 @@
+UPDATE programming_languages
+SET language='JavaScript'
+WHERE id=2;
+
+---------------------------------------------------------------
+UPDATE programming_languages
+SET rating=90
+WHERE id=1;
