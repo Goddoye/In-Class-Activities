@@ -1,0 +1,24 @@
+INSERT INTO people (name, has_pet, pet_type, pet_name, pet_age)
+VALUES ('Jacob', true, 'dog', 'Misty', 10),
+ ('Ahmed', true, 'rock', 'Rockington', 100),
+ ('Peter', true, 'cat', 'Franklin', 2),
+ ('Dave', true, 'dog', 'Queso', 1);
+---------------------------------------------------------------
+INSERT INTO cities(city,state,population)
+VALUES('Alameda','California','79177'),
+('Mesa','Arizona','496401'),
+('Boerne','Texas','16056'),
+('Anaheim','California','352497'),
+('Tucson','Arizona','535677'),
+('Garland','Texas','238002');
+---------------------------------------------------------------
+INSERT INTO programming_languages(language,rating)
+VALUES ('Python',100),
+('VBA',65),
+('R',92),
+('SAS',88);
+---------------------------------------------------------------
+INSERT INTO programming_languages (language, rating)
+VALUES ('Python', 98),
+('C++', 73),
+('R', 95);
