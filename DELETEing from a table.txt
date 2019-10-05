@@ -1,2 +1,10 @@
- DELETE from people 
- WHERE name ='Ahmed'
+DELETE from people 
+WHERE name ='Ahmed'
+
+ --------------------------------------------------
+ 
+DELETE FROM people 
+WHERE id=7;
+
+DELETE from programming_languages
+WHERE id=5;
