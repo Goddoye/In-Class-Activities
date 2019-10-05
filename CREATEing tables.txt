@@ -6,3 +6,26 @@ pet_name VARCHAR(30),
 pet_age INT);
 
 -----------------------------------------------
+CREATE TABLE cities(
+city VARCHAR(30),
+state VARCHAR(30),
+population INT);
+
+
+
+------------------------------------------------
+#Allows for unique values by creating a index column named id:(id SERIAL PRIMARY KEY)
+CREATE TABLE people (
+id SERIAL PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+has_pet BOOLEAN DEFAULT false,
+pet_type VARCHAR (10) NOT NULL,
+pet_name VARCHAR(30),
+pet_age INT);
+
+------------------------------------------------
+CREATE TABLE bird_song(
+english_name VARCHAR,
+country VARCHAR,
+latitde DEC,
+longitude DEC);
