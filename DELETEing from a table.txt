@@ -1,0 +1,2 @@
+ DELETE from people 
+ WHERE name ='Ahmed'
