@@ -1,0 +1,32 @@
+SELECT COUNT(film_id) FROM film;
+
+-----------------------------------------
+#Gives the count table an alias for the column
+SELECT COUNT(film_id) AS "Total films" FROM film;
+
+
+-----------------------------------------
+SELECT rating, COUNT(film_id) AS "Total Films"
+FROM film
+GROUP BY rating;
+
+-----------------------------------------
+#Ordering by column 1 (rating)
+SELECT rating, COUNT(film_id) AS "Total Films"
+FROM film
+GROUP BY rating
+ORDER BY 1;
+
+-----------------------------------------
+#Ordering by column 2 (TotalFilm)
+SELECT rating, COUNT(film_id) AS "Total Films"
+FROM film
+GROUP BY rating
+ORDER BY 2 DESC;
+
+-----------------------------------------
+#Using having statement to filter your grouped column
+SELECT rating, COUNT(film_id) AS "Total Films"
+FROM film
+GROUP BY rating
+having COUNT(film_id)>200
