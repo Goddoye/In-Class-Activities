@@ -1,0 +1,14 @@
+#Joins columns from multiple tables together based on a common column
+SELECT country.country, COUNT(country.country) AS "country count"
+FROM city
+JOIN country ON city.country_id = country.country_id
+GROUP BY country.country
+ORDER BY "country count" DESC;
+
+-------------------------------------------------------------------------------------
+SELECT cus.first_name, cus.last_name FROM customer cus 
+INNER JOIN address a 
+ON cus.address_id = a.address_id
+INNER JOIN city c
+ON a.city_id = c.city_id
+WHERE city LIKE 'Q%'
