@@ -1,0 +1,8 @@
+SELECT SUM(replacement_cost) 
+FROM film;
+
+
+--------------------------------------------------------------------------
+SELECT SUM(replacement_cost) 
+FROM film
+GROUP BY rating;
