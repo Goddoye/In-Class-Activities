@@ -1,0 +1,12 @@
+SELECT rental_duration, MIN(rental_rate) AS "Min Rental rate",MAX(rental_rate) AS "Max Rental rate"
+FROM film
+GROUP BY rental_duration;
+
+-------------------------------------------------------------------------------
+
+SELECT MAX(length)
+FROM film;
+-------------------------------------------------------------------------------
+
+SELECT MIN(length)
+FROM film;
