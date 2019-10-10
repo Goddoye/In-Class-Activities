@@ -1,0 +1,43 @@
+CREATE TABLE animals_all (
+  id SERIAL PRIMARY KEY,
+  animal_species VARCHAR(30) NOT NULL,
+  owner_name VARCHAR(30) NOT NULL
+);
+
+INSERT INTO animals_all (animal_species, owner_name)
+VALUES
+  ('Dog', 'Bob'),
+  ('Fish', 'Bob'),
+  ('Cat', 'Kelly'),
+  ('Dolphin', 'Aquaman');
+
+SELECT * FROM animals_all;
+
+CREATE TABLE animals_location (
+  id SERIAL PRIMARY KEY,
+  location VARCHAR(30) NOT NULL,
+  animal_id INTEGER NOT NULL,
+  FOREIGN KEY (animal_id) REFERENCES animals_all(id)
+);
+
+
+------------------------------------------------------------------
+CREATE TABLE customer(
+id SERIAL,
+first_name VARCHAR(30) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+PRIMARY KEY(id));
+
+INSERT INTO customer (first_name, last_name)
+VALUES
+ ('Bob', 'Smith'),
+ ('Jane', 'Davidson'),
+ ('Jimmy', 'Bell'),
+ ('Stephanie', 'Duke');
+ 
+CREATE TABLE customer_email(
+id SERIAL,
+email VARCHAR(30),
+customer_id INTEGER NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY(customer_id) REFERENCES customer(id))
