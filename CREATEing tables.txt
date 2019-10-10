@@ -29,3 +29,20 @@ english_name VARCHAR,
 country VARCHAR,
 latitde DEC,
 longitude DEC);
+
+------------------------------------------------
+CREATE TABLE owners (
+ id INT PRIMARY KEY NOT NULL,
+ owner_name VARCHAR(255)
+);
+
+----------------------------------------------
+
+CREATE TABLE pet_names (
+ id INT NOT NULL PRIMARY KEY,
+ owner_id INT NOT NULL,
+ pet_name VARCHAR(255),
+ type VARCHAR (255)
+);
+
+-------------------------------------------------
