@@ -1,0 +1,52 @@
+/* Add your styles here */
+body{
+    background-color: #f1f1f1;
+}
+
+.header{
+    background-color: hsl(0, 0%, 80%);
+}
+
+.navbar{
+    background-color:#5191fd ;
+} 
+h1{
+    font-size: 60px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+.header h1{
+padding: 60px;
+margin: 0;
+color: #000000;
+text-align: center;
+}
+
+.post {
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 3px;
+  }
+
+  .navbar li a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .navbar {
+    padding: 10px;
+    background: #5191fd;
+  }
