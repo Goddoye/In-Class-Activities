@@ -1,0 +1,6 @@
+show collections
+
+
+db.createCollection("destinations")
+
+
