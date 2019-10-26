@@ -1,0 +1,1 @@
+db.destinations.remove({"country": "Morocco"}, {justOne: true})
