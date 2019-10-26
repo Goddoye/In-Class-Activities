@@ -1,0 +1,2 @@
+db.destinations.update({"country": "Egypt"}, {$set: {"continent": "Antarctica"}})
+
