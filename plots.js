@@ -1,46 +1,51 @@
 function init() {
-  data = [{
-    x: [1, 2, 3, 4, 5],
-    y: [0, 0, 0, 0, 0] }];
-  var LINE = document.getElementById("plot");
-  Plotly.plot(LINE, data);
+  var data = [{
+    values: [19, 26, 55, 88],
+    labels: ["Spotify", "Soundcloud", "Pandora", "Itunes"],
+    type: "pie"
+  }];
+
+  var layout = {
+    height: 600,
+    width: 800
+  };
+
+  Plotly.plot("pie", data, layout);
 }
 
-function updatePlotly(newx, newy) {
-  var LINE = document.getElementById("plot");
+function updatePlotly(newdata) {
+  // YOUR CODE HERE
+  // Use `Plotly.restyle` to update the pie chart with the newdata array
 
-  // Note the extra brackets around 'newx' and 'newy'
-  Plotly.restyle(LINE, "x", [newx]);
-  Plotly.restyle(LINE, "y", [newy]);
+    var PIE = document.getElementById("pie");
+  
+
+    Plotly.restyle(PIE, "values", [newdata]);
+    
+  
 }
 
 function getData(dataset) {
-
-  // Initialize empty arrays to contain our axes
-  var x = [];
-  var y = [];
-
-  // Fill the x and y arrays as a function of the selected dataset
+  // YOUR CODE HERE
+  // create a select statement to select different data arrays (YOUR CHOICE)
+  // whenever the dataset parameter changes. This function will get called
+  // from the dropdown event handler.
+  var data = [];
   switch (dataset) {
-  case "dataset1":
-    x = [1, 2, 3, 4, 5];
-    y = [0.1, 0.2, 0.3, 0.4, 0.5];
+  case "dataset1": 
+    data = [1,2,3,4];
     break;
   case "dataset2":
-    x = [10, 20, 30, 40, 50];
-    y = [1, 10, 100, 1000, 10000];
+    data = [12,24,48,64];
     break;
   case "dataset3":
-    x = [100, 200, 300, 400, 500];
-    y = [10, 100, 50, 10, 0];
+    data = [4,7,29,34];
     break;
   default:
-    x = [1, 2, 3, 4, 5];
-    y = [0, 0, 0, 0, 0];
+    data = [1,2,3,4];
     break;
   }
-
-  updatePlotly(x, y);
+  updatePlotly(data);
 }
 
 init();
